@@ -12,8 +12,9 @@
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link rel="stylesheet" href="<?php echo ROOT_URL; ?>css/bootstrap.min.css">
-        <script src="<?php echo ROOT_URL; ?>js/vendor/modernizr-2.6.2.min.js"></script>
+        <link rel="stylesheet/less" href="/css/style.less">
+        <script src="/js/vendor/less-1.6.1.min.js"></script>
+        <script src="/js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -28,9 +29,9 @@
 			<p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
 		</div>
 		
-        <script src="<?php echo ROOT_URL; ?>js/vendor/jquery-1.10.2.min.js"></script>
-        <script src="<?php echo ROOT_URL; ?>js/vendor/jquery-ui-1.10.3.custom.min.js"></script>
-        <script src="<?php echo ROOT_URL; ?>js/init.js"></script>
+        <script src="/js/vendor/jquery-1.10.2.min.js"></script>
+        <script src="/js/vendor/jquery-ui-1.10.3.custom.min.js"></script>
+        <script src="/js/init.js"></script>
 
     </body>
 </html>
