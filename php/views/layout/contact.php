@@ -12,8 +12,7 @@
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link rel="stylesheet/less" href="<?php echo ROOT_URL; ?>css/style.less">
-        <script src="<?php echo ROOT_URL; ?>js/vendor/less-1.6.1.min.js"></script>
+        <link rel="stylesheet/less" href="<?php echo ROOT_URL; ?>css/bootstrap.min.css">
         <script src="<?php echo ROOT_URL; ?>js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
