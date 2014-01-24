@@ -1,5 +1,4 @@
-var express	= require('express');
-var app 	= express();
+var app		= require('express')();
 var http 	= require('http').createServer(app);
 var colors	= require('colors');
 var routes	= require('./routes');

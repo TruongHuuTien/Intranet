@@ -2,6 +2,7 @@ var app		= require('express')();
 var fs		= require('fs');
 var request = require('request');
 var path	= require('path');
+var colors	= require('colors');
 
 var PHP_SERVER_URL	= 'http://localhost:8888';
 
@@ -9,7 +10,7 @@ var _dev			= true;
 
 /* Log all input */
 exports.log_input = function(req, res, next) {
-	console.log('%s %s', req.method, req.url);
+	console.log('%s %s'.cyan, req.method, req.url);
 	next();
 };
 
