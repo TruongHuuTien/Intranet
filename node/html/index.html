@@ -5,7 +5,8 @@
 	<style type="text/css">
 	body {
 		background-image: url('main_bgr.png');
-	}</style>
+	}
+	</style>
 </head>
 <body>
 
