@@ -20,7 +20,7 @@ exports.loadFile = function(req, httpRes) {
 	url = req.url;
 	filePath = path.dirname(require.main.filename)+'/html'+url;
 	if (pathParsed = url.match(/^(.*)(.html)$/)) { // Convert .html -> .php
-		requestPath = pathParsed[1];
+		requestPath = 'layout.php?page='pathParsed[1];
 	} else {
 		requestPath = url;
 	}
