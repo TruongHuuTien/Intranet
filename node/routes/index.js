@@ -19,7 +19,7 @@ exports.loadFile = function(req, httpRes) {
 	// Prepare request's path and file's path
 	url = req.url;
 	filePath = path.dirname(require.main.filename)+'/html'+url;
-	if (pathParsed = url.match(/^\/(.*)(.html)$/)) { // Convert .html -> .php
+	if (pathParsed = url.match(/^\/(.*)(\.html)$/)) { // Convert .html -> .php
 		requestPath = '/layout.php?content='+pathParsed[1];
 	} else {
 		requestPath = url;
@@ -29,9 +29,10 @@ exports.loadFile = function(req, httpRes) {
 		url			: PHP_SERVER_URL+requestPath,
 		encoding	: null
 	};
-	console.log(requestParam.url);
+	
 	// fs.exist check the existance of the requested file
 	fs.exists(filePath, function(exists) {
+		console.log(filePath, exists);
 		if (_dev) { // server is on Developpement mode
 			if (exists) {
 				// Get file Information for cache date; stats.atime = file's Add Dates
@@ -41,7 +42,8 @@ exports.loadFile = function(req, httpRes) {
 					'If-Modified-Since'	: new Date(stats.atime).toUTCString()
 				};
 			}
-			//Send a request with|out cache 
+			//Send a request with|out cache
+			console.log(requestParam.url);
 			request(requestParam, function(err, res, buffer) {
 				if (err == null) {
 					if (res.statusCode === 304) {

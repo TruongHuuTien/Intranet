@@ -8,6 +8,3 @@ http.listen('80');
 /*	Routes	*/
 app.use(routes.log_input);
 app.use(routes.loadFile);
-app.get(/\.less$/, function(req, res, next) {
-	console.log(req.url);
-});
