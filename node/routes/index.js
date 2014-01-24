@@ -19,8 +19,8 @@ exports.loadFile = function(req, httpRes) {
 	// Prepare request's path and file's path
 	url = req.url;
 	filePath = path.dirname(require.main.filename)+'/html'+url;
-	if (pathParsed = url.match(/^(.*)(.html)$/)) { // Convert .html -> .php
-		requestPath = 'layout.php?page='pathParsed[1];
+	if (pathParsed = url.match(/^\/(.*)(.html)$/)) { // Convert .html -> .php
+		requestPath = '/layout.php?content='+pathParsed[1];
 	} else {
 		requestPath = url;
 	}
@@ -29,6 +29,7 @@ exports.loadFile = function(req, httpRes) {
 		url			: PHP_SERVER_URL+requestPath,
 		encoding	: null
 	};
+	console.log(requestParam.url);
 	// fs.exist check the existance of the requested file
 	fs.exists(filePath, function(exists) {
 		if (_dev) { // server is on Developpement mode
