@@ -115,6 +115,7 @@ class Selectic_Template extends Selectic_Object
 	public function display()
 	{
 		if($this->_output !== null) {
+			header('filePath: ' . $_REQUEST['filePath']);
 			echo $this->_output;
 		}
 	}
