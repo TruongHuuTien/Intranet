@@ -59,7 +59,7 @@ exports.loadFile = function(req, httpRes) {
 	} else { // Server is on Production Mode
 		if (!fs.existsSync(filePath)) { // We don't have this file, request it from php server
 			request(requestParam, function(err, res, buffer) {
-				console.log(res);
+				console.log(res.headers);
 				if (err == null) {
 					// Write file before sending
 					fs.writeFile(filePath, buffer, function(err) {
