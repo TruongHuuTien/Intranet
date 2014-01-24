@@ -2,8 +2,10 @@ var app		= require('express')();
 var fs		= require('fs');
 var request = require('request');
 var path	= require('path');
+
+var PHP_SERVER_URL	= 'http://localhost:8888';
+
 var _dev			= true;
-var _phpServerUrl	= 'http://localhost:8888';
 
 /* Log all input */
 exports.log_input = function(req, res, next) {
@@ -23,7 +25,7 @@ exports.loadFile = function(req, httpRes) {
 	}
 	// Prepare request's parameters if we have to send a request
 	requestParam = {
-		url	: _phpServerUrl+requestPath,
+		url	: PHP_SERVER_URL+requestPath,
 		encoding	: null,
 	};
 	// fs.exist check the existance of the requested file
