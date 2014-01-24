@@ -5,3 +5,5 @@ node/.DS_Store
 .project
 
 node/html
+
+php/logs/log.log
