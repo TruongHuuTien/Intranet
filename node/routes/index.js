@@ -4,7 +4,7 @@ var request = require('request');
 var path	= require('path');
 var colors	= require('colors');
 
-var PHP_SERVER_URL	= 'http://localhost:8888';
+var PHP_SERVER_URL	= 'http://192.168.0.118:8888';
 
 var _dev			= true;
 
@@ -20,7 +20,7 @@ exports.loadFile = function(req, httpRes) {
 	url = req.url;
 	filePath = path.dirname(require.main.filename)+'/html'+url;
 	if (pathParsed = url.match(/^(.*)(.html)$/)) { // Convert .html -> .php
-		requestPath = pathParsed[1]+".php";
+		requestPath = pathParsed[1];
 	} else {
 		requestPath = url;
 	}
