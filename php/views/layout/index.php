@@ -31,7 +31,7 @@
 		
 		<?php echo $this->renderBlockHTML('block/footer'); ?>
 
-        <script src="/js/vendor/jquery-1.10.2.min.js"></script>
+        <script src="<?php echo ROOT_DIR; ?>js/vendor/jquery-1.10.2.min.js"></script>
         <script src="<?php echo ROOT_DIR; ?>js/vendor/jquery-ui-1.10.3.custom.min.js"></script>
         <script src="<?php echo ROOT_DIR; ?>js/init.js"></script>
 
