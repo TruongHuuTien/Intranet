@@ -26,7 +26,7 @@ function findUserByName(name) {
 		}
 	}
 }
-
+console.log('test');
 /* Message */
 var message = [];
 
