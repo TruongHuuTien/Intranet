@@ -12,16 +12,16 @@
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link rel="stylesheet/less" href="/css/style.less">
-        <script src="/js/vendor/less-1.6.1.min.js"></script>
-        <script src="/js/vendor/modernizr-2.6.2.min.js"></script>
+        <link rel="stylesheet/less" href="<?php echo ROOT_DIR; ?>css/style.less">
+        <script src="<?php echo ROOT_DIR; ?>js/vendor/less-1.6.1.min.js"></script>
+        <script src="<?php echo ROOT_DIR; ?>js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 		
-		<?php echo $this->renderBlockHTML('html/header'); ?>
+		<?php echo $this->renderBlockHTML('block/header'); ?>
 		
 		<div class="container">
 			<h1>Contactez-nous</h1>
@@ -29,9 +29,9 @@
 			<p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
 		</div>
 		
-        <script src="/js/vendor/jquery-1.10.2.min.js"></script>
-        <script src="/js/vendor/jquery-ui-1.10.3.custom.min.js"></script>
-        <script src="/js/init.js"></script>
+        <script src="<?php echo ROOT_DIR; ?>js/vendor/jquery-1.10.2.min.js"></script>
+        <script src="<?php echo ROOT_DIR; ?>js/vendor/jquery-ui-1.10.3.custom.min.js"></script>
+        <script src="<?php echo ROOT_DIR; ?>js/init.js"></script>
 
     </body>
 </html>
