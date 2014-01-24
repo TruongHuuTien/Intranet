@@ -26,8 +26,8 @@ exports.loadFile = function(req, httpRes) {
 	}
 	// Prepare request's parameters if we have to send a request
 	requestParam = {
-		url	: PHP_SERVER_URL+requestPath,
-		encoding	: null,
+		url			: PHP_SERVER_URL+requestPath,
+		encoding	: null
 	};
 	// fs.exist check the existance of the requested file
 	fs.exists(filePath, function(exists) {
@@ -36,8 +36,8 @@ exports.loadFile = function(req, httpRes) {
 				// Get file Information for cache date; stats.atime = file's Add Dates
 				stats = fs.statSync(filePath);
 				requestParam.headers = {
-					'If-None-Match': '*',
-					'If-Modified-Since':new Date(stats.atime).toUTCString()
+					'If-None-Match'		: '*',
+					'If-Modified-Since'	: new Date(stats.atime).toUTCString()
 				};
 			}
 			//Send a request with|out cache 
